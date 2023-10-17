@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="text1">
+    <div>
+      <img src="./assets/logo.png" alt="">
+    </div>
+    <h1>Hello {{ name }} AGE: {{ age}}</h1>  
+    <p v-html="msg"></p>
+    <p v-pre>Eample: {{ name }} </p>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+ export default{
+    data() {
+      return {
+         name: "Mark", 
+         age: "45", 
+         msg:"<storage>Hello Vue</storage>"
+     };
+   }
+ }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+ h1{
+  color: blueviolet;
+ }
+ .text1{
+    font-size: 30px;
+ }
 </style>
